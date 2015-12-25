@@ -9,29 +9,17 @@
     <meta name="viewport" content="width=device-width, initial-scale=1">
     <!-- Optimize mobile viewport -->
 
-    <title>Node/Angular Todo App</title>
+    <title>JUST DO IT</title>
 
     <!-- SCROLLS -->
     <link rel="stylesheet" href="//netdna.bootstrapcdn.com/bootstrap/3.0.0/css/bootstrap.min.css">
     <!-- load bootstrap -->
     <link rel="stylesheet" href="//netdna.bootstrapcdn.com/font-awesome/4.0.3/css/font-awesome.min.css">
-    <style>
-        html {
-            overflow-y: scroll;
-        }
 
-        body {
-            padding-top: 50px;
-        }
+    <link rel="stylesheet" href="css/styles.css">
 
-        #todo-list {
-            margin-bottom: 30px;
-        }
+    <link href='https://fonts.googleapis.com/css?family=Roboto:400,100,300,500,700|Roboto+Slab:400,100,300,700' rel='stylesheet' type='text/css'>
 
-        #todo-form {
-            margin-bottom: 50px;
-        }
-    </style>
 
     <!-- SPELLS -->
     <script src="//ajax.googleapis.com/ajax/libs/angularjs/1.2.16/angular.min.js"></script>
@@ -52,17 +40,14 @@
 
         <!-- HEADER AND TODO COUNT -->
         <div class="jumbotron text-center">
-            <h1>I'm a Todo-aholic
-                <span class="label label-info">{{ todos.length }}</span>
+            <h1>Just...DO IT
+                <sup><span class="label label-info">{{ todos.length }}</span></sup>
             </h1>
         </div>
 
         <!-- TODO LIST -->
         <div id="todo-list" class="row">
-            <div class="col-sm-4 col-sm-offset-4">
-
-
-
+            <div class="col-sm-8 col-sm-offset-2">
                 <!-- LOOP OVER THE TODOS IN $scope.todos -->
                 <div class="checkbox" ng-repeat="todo in todos">
                     <label>
@@ -79,12 +64,12 @@
 
         <!-- FORM TO CREATE TODOS -->
         <div id="todo-form" class="row">
-            <div class="col-sm-8 col-sm-offset-2 text-center">
+            <div class="col-sm-12 text-center">
                 <form>
                     <div class="form-group">
 
                         <!-- BIND THIS VALUE TO formData.text IN ANGULAR -->
-                        <input type="text" class="form-control input-lg text-center" placeholder="I want to buy a puppy that will love me forever" ng-model="formData.text">
+                        <input type="text" class="form-control input-lg" placeholder="MAKE YOUR DREAMS COME TRUE" ng-model="formData.text">
                     </div>
 
                     <!-- createToDo() WILL CREATE NEW TODOS -->
@@ -93,9 +78,10 @@
             </div>
         </div>
 
-        <div class="text-center text-muted">
-            <p>A demo by <a href="http://scotch.io">Scotch</a>.</p>
-            <p>Read the <a href="http://scotch.io/tutorials/javascript/creating-a-single-page-todo-app-with-node-and-angular">tutorial</a>.</p>
+        <div id="fine-print">
+            <div class="text-center text-muted">
+                <p>A single page todo app based on a scotch.io <a href="http://scotch.io/tutorials/javascript/creating-a-single-page-todo-app-with-node-and-angular">tutorial</a>.</p>
+            </div>
         </div>
 
     </div>
